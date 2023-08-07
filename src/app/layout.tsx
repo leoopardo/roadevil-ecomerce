@@ -6,6 +6,7 @@ import Image from "next/image";
 import "./globals.css";
 import TopBarNavigation from "./componets/topBarNavigation/TopBarNavigation";
 import ScrollTopBar from "./componets/scrollTopBar/scrollTopBar";
+import Footer from "./componets/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </Head>
-      <body className="bg-zinc-200 text-zinc-950">
+      <body className="bg-zinc-200 text-zinc-950" style={{ padding: 0 }}>
         <div
           className="flex items-center justify-between w-screen"
           style={{
@@ -41,7 +42,7 @@ export default function RootLayout({
             zIndex: 9,
           }}
         >
-         <ScrollTopBar/>
+          <ScrollTopBar />
           <Image
             width={180}
             height={30}
@@ -54,6 +55,7 @@ export default function RootLayout({
         </div>
 
         {children}
+        <Footer />
       </body>
     </html>
   );

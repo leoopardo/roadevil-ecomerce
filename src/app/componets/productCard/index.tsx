@@ -14,26 +14,23 @@ export default function Product({ name, img, link, price }: ProductInterface) {
   const width = useWindowWidth();
 
   return (
-    <div
+    <motion.div
       className="w-64 h-4/4 flex justify-center items-center flex-col"
-      style={{}}
+      whileHover={{
+        opacity: 0.6,
+        cursor: "pointer",
+        scale: 1.1,
+      }}
+      whileTap={{ scale: 1, opacity: 0.8 }}
     >
+      <h2 className="text-xl text-gray-900 text-center">{name}</h2>
       <h2
-        className="text-xl text-gray-900 text-center mb-12"
-       
+        className="text-sm text-amber-500 text-center mb-12 mt-2"
+        style={{padding: 0, fontWeight: 600}}
       >
-        {name}
+        VER TODOS
       </h2>
-      <motion.img
-        src={img}
-        className="h-max w-max"
-        style={{
-          backgroundImage: `url(${img})`,
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-      />
-    </div>
+      <motion.img src={img} className="h-max w-max" />
+    </motion.div>
   );
 }

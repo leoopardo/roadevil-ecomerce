@@ -6,7 +6,6 @@ import Product from "../productCard";
 
 export default function FirstCard() {
   const width = useWindowWidth();
-  console.log(width);
 
   function getWidth(width: number) {
     if (width > 1300) return "-75px";
@@ -22,13 +21,11 @@ export default function FirstCard() {
   return (
     <>
       {width < 1200 ? (
-        <div className="absolute w-screen flex justify-center"   style={{ top: "calc(18vw + 80px)" }}>
-          <img
-            width={350}
-            src="/lwb.png"
-            alt="life without boundaries"
-         
-          />
+        <div
+          className="absolute w-screen flex justify-center"
+          style={{ top: "calc(18vw + 80px)" }}
+        >
+          <img width={350} src="/lwb.png" alt="life without boundaries" />
         </div>
       ) : (
         <div className="absolute top-72 w-screen flex justify-center">
@@ -43,6 +40,7 @@ export default function FirstCard() {
           marginTop: getWidth(width),
           zIndex: 1,
           minHeight: "450px",
+          overflow: "hidden",
         }}
       >
         <Product
@@ -52,13 +50,24 @@ export default function FirstCard() {
           link="/:15"
         />
 
-        <div
-          className="h-full w-5"
-          style={{
-            width: "1px",
-            backgroundColor: "#acabab4c",
-          }}
-        />
+        {width > 800 ? (
+          <div
+            style={{
+              width: "1px",
+              backgroundColor: "#acabab29",
+              height: "450px",
+            }}
+          />
+        ) : (
+          <div
+            className="mt-4 mb-4"
+            style={{
+              width: "100%",
+              backgroundColor: "#acabab29",
+              height: "1px",
+            }}
+          />
+        )}
 
         <Product
           name="Moda street"
@@ -67,10 +76,24 @@ export default function FirstCard() {
           link="/:15"
         />
 
-        <div
-          className="h-full"
-          style={{ width: "0.5px", backgroundColor: "#acabab4c" }}
-        />
+{width > 800 ? (
+          <div
+            style={{
+              width: "1px",
+              backgroundColor: "#acabab29",
+              height: "450px",
+            }}
+          />
+        ) : (
+          <div
+            className="mt-4 mb-4"
+            style={{
+              width: "100%",
+              backgroundColor: "#acabab29",
+              height: "1px",
+            }}
+          />
+        )}
 
         <Product
           name="Acessórios"
