@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
-  font-style: "Montserrat Alternates", sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  font-weight: 400;
+  font-style: normal;
 }
 
 ::-webkit-scrollbar {

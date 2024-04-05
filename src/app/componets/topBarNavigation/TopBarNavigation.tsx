@@ -10,7 +10,6 @@ export default function TopBarNavigation() {
     null
   );
 
-
   return (
     width > 500 && (
       <>
@@ -24,12 +23,13 @@ export default function TopBarNavigation() {
             className="mr-5 ml-3 "
             style={{ paddingBottom: "13px", borderColor: "#ffb007" }}
           >
-            Home
-          </motion.div> <motion.div
+            <a href="/">Home</a>
+          </motion.div>
+          <motion.div
             whileHover={{ color: "#ffb007", cursor: "pointer" }}
             className="mr-5"
           >
-            Ofertas
+            <a href="/ofertas">Ofertas</a>
           </motion.div>
           <motion.div
             whileHover={{
@@ -46,7 +46,7 @@ export default function TopBarNavigation() {
           >
             Skateboard
             <motion.div
-              className="fixed w-32  h-60 rounded flex flex-col"
+              className="fixed w-fit h-60 rounded-xl flex flex-col"
               animate={{
                 height: dropdownOpen === 1 ? 200 : 0,
                 overflow: "hidden",
@@ -56,24 +56,24 @@ export default function TopBarNavigation() {
               }}
               style={{ top: "100px", display: "none", height: 0 }}
             >
-              <ul className="pt-3 pl-5 text-sm">
+              <ul className="pt-3 p-5 text-base">
                 <motion.li
-                  className="text-white mb-2"
+                  className="text-white mb-2 "
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 1
+                  <a href="/skates/pre-montados">Skates pré-montados</a>
                 </motion.li>
                 <motion.li
                   className="text-white mb-2"
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 2
+                  <a href="/skates/pecas">Peças</a>
                 </motion.li>
                 <motion.li
                   className="text-white mb-2"
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 3
+                  <a href="/skates/acessorios">Acessórios</a>
                 </motion.li>
               </ul>
             </motion.div>
@@ -88,7 +88,7 @@ export default function TopBarNavigation() {
           >
             Longboard
             <motion.div
-              className="fixed w-32  h-60 rounded flex flex-col"
+              className="fixed w-fit h-fit rounded-xl flex flex-col"
               animate={{
                 height: dropdownOpen === 2 ? 200 : 0,
                 overflow: "hidden",
@@ -98,24 +98,24 @@ export default function TopBarNavigation() {
               }}
               style={{ top: "100px", display: "none", height: 0 }}
             >
-             <ul className="pt-3 pl-5 text-sm">
+              <ul className="pt-3 p-5 text-base">
                 <motion.li
                   className="text-white mb-2"
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 1
+                  Longboards pré-montados
                 </motion.li>
                 <motion.li
                   className="text-white mb-2"
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 2
+                  Peças
                 </motion.li>
                 <motion.li
                   className="text-white mb-2"
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 3
+                  Acessórios
                 </motion.li>
               </ul>
             </motion.div>
@@ -130,7 +130,7 @@ export default function TopBarNavigation() {
           >
             Moda
             <motion.div
-              className="fixed w-32  h-60 rounded flex flex-col"
+              className="fixed w-fit  h-60 rounded-xl flex flex-col"
               animate={{
                 height: dropdownOpen === 3 ? 200 : 0,
                 overflow: "hidden",
@@ -140,29 +140,28 @@ export default function TopBarNavigation() {
               }}
               style={{ top: "100px", display: "none", height: 0 }}
             >
-              <ul className="pt-3 pl-5 text-sm">
+              <ul className="pt-3 p-5 text-base">
                 <motion.li
                   className="text-white mb-2"
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 1
+                  Camisetas
                 </motion.li>
                 <motion.li
                   className="text-white mb-2"
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 2
+                  Calças
                 </motion.li>
                 <motion.li
                   className="text-white mb-2"
                   whileHover={{ color: "#ffb007", cursor: "pointer" }}
                 >
-                  Opção 3
+                  Tênis
                 </motion.li>
               </ul>
             </motion.div>
           </motion.div>
-         
         </div>
       </>
     )

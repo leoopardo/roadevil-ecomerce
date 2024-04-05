@@ -8,6 +8,7 @@ export default function FirstCard() {
   const width = useWindowWidth();
 
   function getWidth(width: number) {
+    if (width > 1600) return "-200px";
     if (width > 1300) return "-75px";
     if (width > 1200) return "-130px";
     if (width > 1200) return "-130px";
@@ -29,7 +30,30 @@ export default function FirstCard() {
         </div>
       ) : (
         <div className="absolute top-72 w-screen flex justify-center">
-          <img src="/lwb.png" alt="life without boundaries" />
+          <h1
+            style={{
+              fontSize: 48,
+              fontWeight: 800,
+              textTransform: "uppercase",
+              color: "#ffffff",
+              fontStyle: "italic"
+            }}
+          >
+            life{" "}
+            <span
+              style={{
+                textDecorationLine: "line-through",
+                fontSize: 48,
+                fontWeight: 700,
+                textTransform: "uppercase",
+                color: "#ffffff",
+                fontStyle: "italic"
+              }}
+            >
+              without
+            </span>{" "}
+            boundaries
+          </h1>
         </div>
       )}
 
@@ -76,7 +100,7 @@ export default function FirstCard() {
           link="/:15"
         />
 
-{width > 800 ? (
+        {width > 800 ? (
           <div
             style={{
               width: "1px",
